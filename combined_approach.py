@@ -94,7 +94,7 @@ for _ in range(100):
 						tf.keras.losses.categorical_crossentropy,
 						weighted_categorical_crossentropy([1, 79]),
 				  ],
-				  loss_weights=[.1, .1, 1.])
+				  loss_weights=[.05, .05, 1.])
 
 	for i in range(130):
 		hist = model.fit([X1_train, X2_train], [y1_train, y2_train, y3_train], epochs=10, verbose=0)
@@ -109,7 +109,7 @@ for _ in range(100):
 					  loss=[
 						  tf.keras.losses.categorical_crossentropy,
 						  tf.keras.losses.categorical_crossentropy,
-						  weighted_categorical_crossentropy([1, 39]),
+						  weighted_categorical_crossentropy([1, 79]),
 					  ],
 					  loss_weights=[.05, .05, 1.])
 
